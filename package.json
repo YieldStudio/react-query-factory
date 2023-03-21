@@ -1,0 +1,56 @@
+{
+  "name": "@yieldstudio/react-query-factory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yield Studio React Query Factory",
+  "homepage": "https://github.com/YieldStudio/react-query-factory",
+  "license": "MIT",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YieldStudio/react-query-factory"
+  },
+  "bugs": {
+    "url": "https://github.com/YieldStudio/react-query-factory/issues"
+  },
+  "keywords": [
+    "typesafe",
+    "zod",
+    "tanstack",
+    "react-query",
+    "factory",
+    "typescript"
+  ],
+  "files": [
+    "./index.ts"
+  ],
+  "contributors": [
+    {
+      "name": "James Hemery",
+      "email": "james@yieldstudio.fr"
+    },
+    {
+      "name": "Julien Sanchez-Porro",
+      "email": "julien@yieldstudio.fr"
+    }
+  ],
+  "scripts": {
+    "format": "prettier --write ./src",
+    "lint": "eslint **/*.ts",
+    "lint:fix": "eslint **/*.ts --fix"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.28.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "axios": "^1.3.4",
+    "qs": "^6.11.1",
+    "typescript": "^5.0.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/qs": "^6.9.7",
+    "@yieldstudio/eslint-config": "^1.0.5",
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.6"
+  }
+}
