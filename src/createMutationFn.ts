@@ -45,6 +45,6 @@ export function createMutationFn<TVariables = void, TSchema extends ZodTypeAny =
       return res.data;
     }
 
-    return schema.parse(res.data);
+    return schema.parseAsync(res.data);
   };
 }
