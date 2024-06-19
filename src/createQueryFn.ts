@@ -1,7 +1,7 @@
 import { stringify } from 'qs';
 import { deleteEmptyEntries } from './utils/deleteEmptyEntries';
 import { getAxiosInstance } from './axios';
-import type { QueryFunctionContext, QueryKey } from '@tanstack/react-query';
+import type { QueryFunction, QueryFunctionContext, QueryKey } from '@tanstack/react-query';
 import type { AxiosRequestConfig } from 'axios';
 import type { ZodTypeAny, z } from 'zod';
 
@@ -28,7 +28,7 @@ function determineEndpointFromQueryKey(queryKey: QueryKey, pageParam?: number | 
 export function createQueryFn<TSchema extends ZodTypeAny>(
   schema: TSchema,
   options?: Omit<AxiosRequestConfig, 'method' | 'url'>
-) {
+): QueryFunction<z.infer<TSchema>, QueryKey, number | string> {
   return async ({
     queryKey,
     pageParam,

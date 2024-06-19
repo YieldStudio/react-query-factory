@@ -30,8 +30,8 @@ yarn add --dev @yieldstudio/react-query-factory
 Create a client and provide him to your App
 
 ```tsx
-import { 
-  QueryClient, 
+import {
+  QueryClient,
   QueryClientProvider,
   setAxiosInstance,
 } from '@yieldstudio/react-query-factory';
@@ -70,7 +70,7 @@ export const queryFn = createQuery(schema);
 
 export function useTodosQuery() {
   const queryKey = QUERY_CACHE_KEY.todos.list());
-  return useQuery(queryKey, queryFn);
+  return useQuery({ queryKey, queryFn });
 }
 ```
 
