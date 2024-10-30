@@ -17,11 +17,7 @@ function determineEndpointFromQueryKey(queryKey: QueryKey, pageParam?: number | 
 
   const queryString =
     Object.keys(queryStringObj).length > 0
-      ? stringify(deleteEmptyEntries(queryStringObj), {
-          arrayFormat: 'brackets',
-          encode: false,
-          addQueryPrefix: true,
-        })
+      ? stringify(deleteEmptyEntries(queryStringObj), { arrayFormat: 'brackets', encode: false, addQueryPrefix: true })
       : '';
 
   const url = queryKey.filter((item) => typeof item !== 'object').join('/') + queryString;
@@ -43,6 +39,6 @@ export function createQueryFn<TSchema extends ZodTypeAny>(
       ...options,
     });
 
-    return schema.parse(response.data);
+    return schema.parseAsync(response.data);
   };
 }
