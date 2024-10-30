@@ -1,13 +1,13 @@
 {
   "name": "@yieldstudio/react-query-factory",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "private": false,
   "description": "Yield Studio React Query Factory",
   "homepage": "https://github.com/YieldStudio/react-query-factory",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YieldStudio/react-query-factory"
+    "url": "git+https://github.com/YieldStudio/react-query-factory.git"
   },
   "bugs": {
     "url": "https://github.com/YieldStudio/react-query-factory/issues"
@@ -71,5 +71,6 @@
     "@yieldstudio/eslint-config": "^1.0.5",
     "eslint": "^8.36.0",
     "prettier": "^2.8.6"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
