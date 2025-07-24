@@ -36,7 +36,7 @@ export interface TypedFormData<T extends Record<string, TypedFormDataValue>> {
      *
      * {@link https://developer.mozilla.org/en-US/docs/Web/API/FormData#formdata.getall}
      */
-    getAll<K extends keyof T>(name: K): Array<T[K]>;
+    getAll<K extends keyof T>(name: K): unknown[];
     /**
      * Returns a boolean stating whether a FormData object contains a certain key.
      *
