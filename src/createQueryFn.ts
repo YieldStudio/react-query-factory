@@ -3,7 +3,7 @@ import { deleteEmptyEntries } from './utils/deleteEmptyEntries';
 import { getAxiosInstance } from './axios';
 import type { QueryFunction, QueryFunctionContext, QueryKey } from '@tanstack/react-query';
 import type { AxiosRequestConfig } from 'axios';
-import type { ZodTypeAny, z } from 'zod';
+import type { ZodType, z } from 'zod';
 
 type QueryKeyObject = Record<string, string | number>;
 
@@ -25,7 +25,7 @@ function determineEndpointFromQueryKey(queryKey: QueryKey, pageParam?: number | 
   return url.startsWith('/') ? url : `/${url}`;
 }
 
-export function createQueryFn<TSchema extends ZodTypeAny>(
+export function createQueryFn<TSchema extends ZodType>(
   schema: TSchema,
   options?: Omit<AxiosRequestConfig, 'method' | 'url'>
 ): QueryFunction<z.infer<TSchema>, QueryKey, number | string> {
