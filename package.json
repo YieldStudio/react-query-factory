@@ -1,6 +1,6 @@
 {
   "name": "@yieldstudio/react-query-factory",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "description": "Yield Studio React Query Factory",
   "homepage": "https://github.com/YieldStudio/react-query-factory",
@@ -59,12 +59,12 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.83.0",
-    "@typescript-eslint/parser": "^8.38.0",
-    "axios": "^1.11.0",
-    "qs": "^6.14.0",
-    "typescript": "^5.8.3",
-    "zod": "^4.0.8"
+    "@tanstack/react-query": "^5.90.16",
+    "@typescript-eslint/parser": "^8.52.0",
+    "axios": "^1.13.2",
+    "qs": "^6.14.1",
+    "typescript": "^5.9.3",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@types/qs": "^6.14.0",
